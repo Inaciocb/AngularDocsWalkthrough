@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { XyzComponent } from './xyz.component';
+import { BitcoinComponent } from './bitcoin.component';
 
-describe('XyzComponent', () => {
-  let component: XyzComponent;
-  let fixture: ComponentFixture<XyzComponent>;
+describe('BitcoinComponent', () => {
+  let component: BitcoinComponent;
+  let fixture: ComponentFixture<BitcoinComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [XyzComponent]
+      declarations: [BitcoinComponent]
     });
-    fixture = TestBed.createComponent(XyzComponent);
+    fixture = TestBed.createComponent(BitcoinComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -18,4 +18,4 @@ describe('XyzComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-}); 
+});
