@@ -6,14 +6,20 @@ import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
 import { BitcoinComponent } from './components/bitcoin/bitcoin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormularioComponent } from './components/formulario/formulario.component';
+import { FormsModule } from '@angular/forms';
+import { ListaUsuariosComponent} from './lista-usuarios/lista-usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponentComponent,
-    BitcoinComponent
+    BitcoinComponent,
+    FormularioComponent,   
+    ListaUsuariosComponent
   ],
   imports: [
+    FormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule
