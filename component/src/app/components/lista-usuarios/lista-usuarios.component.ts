@@ -31,6 +31,13 @@ export class ListaUsuariosComponent implements OnInit {
         this.usuarios = resposta;
       });
   }
+
+
+  removerUsuario(id: number): void {
+    this.http.delete<Usuario[]>('http://localhost:8080/dados/' + id)
+      .subscribe(response => {
+      });
+  }
  
  displayedColumns: string[] = ['id', 'nome', 'cargo', 'idade'];
 }

@@ -35,6 +35,7 @@ export class FormularioComponent {
       });
   }
 
+
   adicionarUsuario(nome: string, cargo: string, idade: number, id: number): void {
     const newUser: Dados = {
       nome: nome,

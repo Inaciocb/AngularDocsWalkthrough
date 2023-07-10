@@ -6,12 +6,14 @@
             <th>nome</th>
             <th>cargo</th>
             <th>idade</th>
+            <th></th> <!-- Add an empty column for the button -->
         </tr>
         <tr *ngFor="let user of usuarios" class="user-row">
-            <td>{{ user.id }}</td>
+            <td>{{ user.id }}</td> 
             <td>{{ user.nome }}</td>
             <td>{{ user.cargo }}</td>
             <td>{{ user.idade }}</td>
+            <button (click)="removerUsuario(user.id)">Remover</button><!-- Add the button with click event -->
         </tr>
     </table>
 </div>

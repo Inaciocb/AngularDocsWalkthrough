@@ -40,5 +40,12 @@ public class DadosController {
     @DeleteMapping("/{id}")
     public void deleteDados(@PathVariable Long id) {
         usuarios.removeIf(usuario -> usuario.getID() == id);
+        for (int i = 0; i < usuarios.size(); i++) {
+            Dados usuario = usuarios.get(i);
+            usuario.setID(i + 1);
+        }
+        usuarios.sort(Comparator.comparingInt(Dados::getID));
     }
+
+
 }
