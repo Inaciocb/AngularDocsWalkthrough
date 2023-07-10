@@ -25,11 +25,8 @@ public class DadosController {
             Dados usuario = usuarios.get(i);
             usuario.setID(i + 1);
         }
-
         return usuarios;
     }
-
-
     @PutMapping
     public void updateDados(@RequestBody Dados atualizacaoDados) {
         for (Dados usuario : this.usuarios) {
@@ -40,8 +37,8 @@ public class DadosController {
             }
         }
     }
-    @DeleteMapping
-    public void deleteDados() {
-        usuarios = null;
+    @DeleteMapping("/{id}")
+    public void deleteDados(@PathVariable Long id) {
+        usuarios.removeIf(usuario -> usuario.getID() == id);
     }
 }
