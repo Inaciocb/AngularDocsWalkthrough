@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 interface Usuario {
   nome: string;
@@ -12,15 +13,10 @@ interface Usuario {
   templateUrl: './lista-usuarios.component.html',
   styleUrls: ['./lista-usuarios.component.css']
 })
-export class ListaUsuariosComponent {
+export class ListaUsuariosComponent implements OnInit {
   usuarios: Usuario[] = [];
 
-  nome: string = '';
-  cargo: string = '';
-  idade: number = 0;
-  id: number = 0;
-
-  constructor() {
+  constructor(private http: HttpClient) { 
     const user1: Usuario = {
       nome: 'teste1',
       cargo: 'cargo1',
@@ -28,21 +24,12 @@ export class ListaUsuariosComponent {
       id: 1
     };
 
-    this.usuarios = [user1];
   }
 
-  adicionarUsuario(nome: string, cargo: string, idade: number, id: number): void {
-    const newUser: Usuario = {
-      nome: nome,
-      cargo: cargo,
-      idade: idade,
-      id: id
-    };
-
-    this.usuarios.push(newUser);
-  }
-
-  removerUsuario(id: number): void {
-    this.usuarios = this.usuarios.filter(user => user.id !== id);
+  ngOnInit(): void {
+    this.http.get<Usuario[]>('http://localhost:8080/dados/dados')
+      .subscribe((resposta) => {
+        this.usuarios = resposta;
+      });
   }
 }
