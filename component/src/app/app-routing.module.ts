@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { BitcoinComponent } from './components/bitcoin/bitcoin.component';
-import { ListaUsuariosComponent} from './lista-usuarios/lista-usuarios.component';
+import { ListaUsuariosComponent} from './components/lista-usuarios/lista-usuarios.component';
 
 const routes: Routes = [
   { path: 'formulario', component: FormularioComponent },
