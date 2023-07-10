@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { ListaUsuariosComponent} from './lista-usuarios/lista-usuarios.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ListaUsuariosComponent} from './lista-usuarios/lista-usuarios.component
     ListaUsuariosComponent
   ],
   imports: [
+    MatTableModule,
     FormsModule,
     HttpClientModule,
     BrowserModule,

@@ -1,3 +1,17 @@
-<p>lista-usuarios works!</p>
-<h2>lista</h2>
-<p *ngFor="let user of usuarios">{{ user.nome }}</p>
+<h2 class="titulo-lista">lista</h2>
+<div>
+    <table class="tabela">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>cargo</th>
+            <th>idade</th>
+        </tr>
+        <tr *ngFor="let user of usuarios" class="user-row">
+            <td>{{ user.id }}</td>
+            <td>{{ user.nome }}</td>
+            <td>{{ user.cargo }}</td>
+            <td>{{ user.idade }}</td>
+        </tr>
+    </table>
+</div>

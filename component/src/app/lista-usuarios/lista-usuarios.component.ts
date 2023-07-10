@@ -14,7 +14,7 @@ interface Usuario {
   styleUrls: ['./lista-usuarios.component.css']
 })
 export class ListaUsuariosComponent implements OnInit {
-  usuarios: Usuario[] = [];
+  usuarios: Usuario[] = []; 
 
   constructor(private http: HttpClient) { 
     const user1: Usuario = {
@@ -23,7 +23,6 @@ export class ListaUsuariosComponent implements OnInit {
       idade: 1,
       id: 1
     };
-
   }
 
   ngOnInit(): void {
@@ -32,4 +31,7 @@ export class ListaUsuariosComponent implements OnInit {
         this.usuarios = resposta;
       });
   }
+ 
+ displayedColumns: string[] = ['id', 'nome', 'cargo', 'idade'];
 }
+
