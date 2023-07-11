@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { UserListService, Dados } from 'src/app/services/user-list.service';
 
 interface Usuario {
   nome: string;
@@ -14,29 +14,29 @@ interface Usuario {
   styleUrls: ['./lista-usuarios.component.css']
 })
 export class ListaUsuariosComponent implements OnInit {
-  usuarios: Usuario[] = []; 
+  usuarios: Usuario[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private userListService: UserListService) {}
 
   ngOnInit(): void {
-    this.fetchUsuarios();
+    this.buscarUsuarios();
 
     setInterval(() => {
-      this.fetchUsuarios();
+      this.buscarUsuarios();
     }, 1000);
   }
 
-  fetchUsuarios(): void {
-    this.http.get<Usuario[]>('http://localhost:8080/dados/dados')
-      .subscribe((resposta) => {
-        this.usuarios = resposta;
-      });
+  //GET
+  buscarUsuarios(): void {
+    this.userListService.buscarUsuarios().subscribe((resposta) => {
+      this.usuarios = resposta;
+    });
   }
 
+  //DELETE
   removerUsuario(id: number): void {
-    this.http.delete<Usuario[]>('http://localhost:8080/dados/' + id)
-      .subscribe(() => {
-        this.fetchUsuarios();
-      });
+    this.userListService.removerUsuario(id).subscribe(() => {
+      this.buscarUsuarios();
+    });
   }
 }

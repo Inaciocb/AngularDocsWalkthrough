@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponentComponent } from './components/first-component/first-component.component';
 import { BitcoinComponent } from './components/bitcoin/bitcoin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioComponent } from './components/formulario/formulario.component';
@@ -14,7 +12,6 @@ import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponentComponent,
     BitcoinComponent,
     FormularioComponent,   
     ListaUsuariosComponent
