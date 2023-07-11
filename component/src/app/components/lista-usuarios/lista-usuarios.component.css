@@ -2,16 +2,17 @@
   font-family: Arial, sans-serif;
 }
 
+.lista {
+  font-family: Arial, sans-serif;
+  color: rgb(72, 69, 69);
+  border:
+}
+
 .tabela {
-  background-color: green;
+  background-color: rgb(212, 191, 110);
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 10px;
-}
-
-.user-row {
-  border: 1px solid black;
-  font-family: Arial, sans-serif;
 }
 
 .tabela th,
@@ -19,4 +20,5 @@
   border: 1px solid black;
   padding: 8px;
   font-family: Arial, sans-serif;
+  border-radius: 10px;
 }

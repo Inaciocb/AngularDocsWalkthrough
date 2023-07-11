@@ -16,29 +16,27 @@ interface Usuario {
 export class ListaUsuariosComponent implements OnInit {
   usuarios: Usuario[] = []; 
 
-  constructor(private http: HttpClient) { 
-    const user1: Usuario = {
-      nome: 'teste1',
-      cargo: 'cargo1',
-      idade: 1,
-      id: 1
-    };
-  }
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
+    this.fetchUsuarios();
+
+    setInterval(() => {
+      this.fetchUsuarios();
+    }, 1000);
+  }
+
+  fetchUsuarios(): void {
     this.http.get<Usuario[]>('http://localhost:8080/dados/dados')
       .subscribe((resposta) => {
         this.usuarios = resposta;
       });
   }
 
-
   removerUsuario(id: number): void {
     this.http.delete<Usuario[]>('http://localhost:8080/dados/' + id)
-      .subscribe(response => {
+      .subscribe(() => {
+        this.fetchUsuarios();
       });
   }
- 
- displayedColumns: string[] = ['id', 'nome', 'cargo', 'idade'];
 }
-
