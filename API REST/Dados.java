@@ -33,6 +33,10 @@ public class Dados {
         this.ID = ID;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }

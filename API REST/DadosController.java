@@ -28,6 +28,7 @@ public class DadosController {
     public void updateDados(@RequestBody Dados atualizacaoDados) {
         for (Dados usuario : this.usuarios) {
             if (usuario.getID() == atualizacaoDados.getID()) {
+                usuario.setNome(atualizacaoDados.getNome());
                 usuario.setIdade(atualizacaoDados.getIdade());
                 usuario.setCargo(atualizacaoDados.getCargo());
                 break;
