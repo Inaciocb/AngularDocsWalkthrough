@@ -14,11 +14,10 @@
         <td>{{ user.nome }}</td>
         <td>{{ user.cargo }}</td>
         <td>{{ user.idade }}</td>
-        <td>
-          <button (click)="removerUsuario(user.id)">Remover</button>
-        </td>
+        <a href="./editar-usuario/" class="editar-usuario">Editar</a>
+        <button class="remover-usuario" (click)="removerUsuario(user.id)">Remover</button>
       </tr>
+
     </table>
   </div>
-
- 
+</div>
