@@ -8,9 +8,14 @@ import { Observable } from 'rxjs';
 export class UserListService {
   constructor(private http: HttpClient) { }
 
-  // GET
+  // GET Lista
   buscarUsuarios(): Observable<Dados[]> {
     return this.http.get<Dados[]>('http://localhost:8080/dados/dados');
+  }
+
+  // GET um user
+  buscarUsuarioPorId(id: number): Observable<Dados> {
+    return this.http.get<Dados>('http://localhost:8080/dados/' + id);
   }
 
   // POST

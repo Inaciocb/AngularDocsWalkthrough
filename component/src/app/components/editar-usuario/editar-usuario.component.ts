@@ -1,21 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+  import { Component, OnInit } from '@angular/core';
+  import { ActivatedRoute } from '@angular/router';
+  import { UserListService, Dados } from 'src/app/services/user-list.service';
 
-@Component({
-  selector: 'app-editar-usuario',
-  templateUrl: './editar-usuario.component.html',
-  styleUrls: ['./editar-usuario.component.css']
-})
-export class EditarUsuarioComponent implements OnInit {
-  userId!: number; // Add the '!' operator to indicate it will be assigned in ngOnInit
+  @Component({
+    selector: 'app-editar-usuario',
+    templateUrl: './editar-usuario.component.html',
+    styleUrls: ['./editar-usuario.component.css']
+  })
+  export class EditarUsuarioComponent implements OnInit {
+    userId: number = 0;
+    dados: Dados = new Dados();
+    dadosEnviados: Dados | null = null;
+    
+    constructor(private route: ActivatedRoute, private userListService: UserListService) { }
 
-  constructor(
-    private route: ActivatedRoute
-    ) { }
+    
 
-  ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.userId = +params['id']; // Assuming the parameter name is 'id'
+    ngOnInit(): void {
+      this.route.params.subscribe(params => {
+        this.userId = +params['id'];
+      });
+    }
+
+    editarDados(): void {
+      this.dados.id = this.userId;
+      this.userListService.atualizarUsuario(this.dados).subscribe(response => {
+      this.dadosEnviados = response;
     });
-  }
 }
+
+    removerUsuario(id: number): void {
+      this.userListService.removerUsuario(id).subscribe(response => {
+        this.dadosEnviados = response;
+      });
+    }
+  }
