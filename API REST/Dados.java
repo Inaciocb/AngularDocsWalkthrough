@@ -4,7 +4,7 @@ public class Dados {
     private int idade;
     private String nome;
     private String cargo;
-    private int ID;
+    private Integer ID;
     public Dados() {
     }
     public Dados(int idade, String nome, String cargo, int ID) {

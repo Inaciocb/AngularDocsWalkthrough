@@ -2,16 +2,28 @@
   font-family: Arial, sans-serif;
 }
 
-.lista {
-  font-family: Arial, sans-serif;
-  color: rgb(72, 69, 69);
-}
-
 .tabela {
   background-color: rgb(212, 191, 110);
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.lista {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.formulario {
+  background-color: rgb(212, 191, 110);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  flex: 1;
 }
 
 .tabela th,
@@ -20,4 +32,20 @@
   padding: 8px;
   font-family: Arial, sans-serif;
   border-radius: 10px;
+}
+
+.form-item {
+  margin-bottom: 10px;
+}
+
+.form-item label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-item input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
 }

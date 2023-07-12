@@ -16,24 +16,39 @@ interface Usuario {
 export class ListaUsuariosComponent implements OnInit {
   usuarios: Usuario[] = [];
 
-  constructor(private userListService: UserListService) {}
+  dados: Dados = new Dados();
+  usuarioEnviado: Dados | null = null;
 
+  constructor(private userListService: UserListService) {}
   ngOnInit(): void {
     this.buscarUsuarios();
-
     setInterval(() => {
       this.buscarUsuarios();
     }, 1000);
   }
 
-  //GET
+  // GET
   buscarUsuarios(): void {
     this.userListService.buscarUsuarios().subscribe((resposta) => {
       this.usuarios = resposta;
     });
   }
 
-  //DELETE
+  // POST
+  adicionarUsuario(): void {
+    this.userListService.enviarDados(this.dados).subscribe(response => {
+      this.usuarioEnviado = response;
+    });
+  }
+
+  // PUT
+  atualizarUsuario(): void {
+    this.userListService.atualizarUsuario(this.dados).subscribe(response => {
+      this.usuarioEnviado = response;
+    });
+  }
+
+  // DELETE
   removerUsuario(id: number): void {
     this.userListService.removerUsuario(id).subscribe(() => {
       this.buscarUsuarios();

@@ -13,14 +13,14 @@ export class FormularioComponent {
 
   constructor(private userListService: UserListService) { }
 
-  enviarDados(): void {
+  adicionarUsuario(): void {
     this.userListService.enviarDados(this.dados).subscribe(response => {
       this.dadosEnviados = response;
     });
   }
 
   editarDados(): void {
-    this.userListService.editarDados(this.dados).subscribe(response => {
+    this.userListService.atualizarUsuario(this.dados).subscribe(response => {
       this.dadosEnviados = response;
     });
   }
@@ -31,8 +31,4 @@ export class FormularioComponent {
     });
   }
 
-  adicionarUsuario(nome: string, cargo: string, idade: number, id: number): void {
-    const newUser: Dados = this.userListService.adicionarUsuario(nome, cargo, idade, id);
-    
-  }
 }
