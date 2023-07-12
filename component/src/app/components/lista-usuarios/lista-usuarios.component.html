@@ -14,10 +14,11 @@
         <td>{{ user.nome }}</td>
         <td>{{ user.cargo }}</td>
         <td>{{ user.idade }}</td>
-        <a href="./editar-usuario/" class="editar-usuario">Editar</a>
-        <button class="remover-usuario" (click)="removerUsuario(user.id)">Remover</button>
+        <td>
+          <a [routerLink]="['/editar-usuario', user.id]" class="editar-usuario">Editar</a>
+          <button class="remover-usuario" (click)="removerUsuario(user.id)">Remover</button>
+        </td>
       </tr>
-
     </table>
   </div>
 </div>

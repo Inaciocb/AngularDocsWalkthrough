@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserListService, Dados } from 'src/app/services/user-list.service';
+import { Router } from '@angular/router';
 
 interface Usuario {
   nome: string;
@@ -55,3 +56,5 @@ export class ListaUsuariosComponent implements OnInit {
     });
   }
 }
+
+
