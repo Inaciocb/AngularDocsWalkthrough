@@ -7,17 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { ListaUsuariosComponent} from './components/lista-usuarios/lista-usuarios.component';
-import { MatTableModule } from '@angular/material/table';
+import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BitcoinComponent,
     FormularioComponent,   
-    ListaUsuariosComponent
+    ListaUsuariosComponent,
+     EditarUsuarioComponent
   ],
   imports: [
-    MatTableModule,
     FormsModule,
     HttpClientModule,
     BrowserModule,
