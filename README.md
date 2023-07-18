@@ -1,1 +1,1 @@
-desenvolvendo sistema CRUD em angular 
+desenvolvendo sistema CRUD em angular + Springboot + Postgre
