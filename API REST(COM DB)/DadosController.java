@@ -17,14 +17,15 @@ public class DadosController {
     }
 
     @PostMapping
-    public List<Dados> setDados(@RequestBody Dados novoDados) {
-        repositorioUsuario.save(novoDados);
-        return repositorioUsuario.findAll();
+    public Dados setDados(@RequestBody Dados novoDados) {
+        return repositorioUsuario.save(novoDados);
     }
 
     @PutMapping
     public void updateDados(@RequestBody Dados atualizacaoDados) {
-        Dados usuario = repositorioUsuario.findById(atualizacaoDados.getID()).orElse(null);
+        Long userID = atualizacaoDados.getID();
+        Dados usuario = repositorioUsuario.findById(userID)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario nao encontrado, id: " + userID));
         if (usuario != null) {
             usuario.setNome(atualizacaoDados.getNome());
             usuario.setIdade(atualizacaoDados.getIdade());
@@ -34,12 +35,13 @@ public class DadosController {
     }
 
     @GetMapping("/{id}")
-    public Dados getUsuarioPorId(@PathVariable int id) {
+    public Dados getUsuarioPorId(@PathVariable Long id) {
         return repositorioUsuario.findById(id).orElse(null);
     }
 
+
     @DeleteMapping("/{id}")
-    public void deleteDados(@PathVariable int id) {
+    public void deleteDados(@PathVariable Long id) {
         repositorioUsuario.deleteById(id);
     }
 }
