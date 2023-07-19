@@ -3,14 +3,14 @@
     <h2 class="titulo-lista">Lista</h2>
     <table class="tabela">
       <tr>
-        <th>ID</th>
+        <th>#</th>
         <th>Nome</th>
         <th>Cargo</th>
         <th>Idade</th>
         <th></th>
       </tr>
-      <tr *ngFor="let user of usuarios" class="user-row">
-        <td>{{ user.id }}</td>
+      <tr *ngFor="let user of usuarios; let indice = index" class="user-row">
+        <td>{{ indice + 1 }}</td>
         <td>{{ user.nome }}</td>
         <td>{{ user.cargo }}</td>
         <td>{{ user.idade }}</td>
