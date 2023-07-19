@@ -21,7 +21,6 @@ public class Dados {
         this.nome = nome;
         this.cargo = cargo;
     }
-
     public Long getID() {
         return ID;
     }

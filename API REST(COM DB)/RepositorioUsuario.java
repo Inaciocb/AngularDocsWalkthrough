@@ -7,4 +7,5 @@
     import java.util.List;
 
     public interface RepositorioUsuario extends JpaRepository<Dados, Long> {
+        List<Dados> findAllByOrderByID();
     }

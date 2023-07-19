@@ -13,7 +13,7 @@ public class DadosController {
 
     @GetMapping("/dados")
     public List<Dados> getUsuarios() {
-        return repositorioUsuario.findAll();
+        return repositorioUsuario.findAllByOrderByID();
     }
 
     @PostMapping
