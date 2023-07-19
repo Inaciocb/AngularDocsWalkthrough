@@ -1,9 +1,28 @@
+/* Custom styles for the h1 heading */
+.titulo h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--font-color);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in;
+}
+
+.titulo h2:hover {
+  color: var(--secondary-color);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
 .titulo-lista {
   font-family: Arial, sans-serif;
+  color: var(--font-color);
+  background-color: var(--accent-color);
 }
 
 .tabela {
-  background-color: rgb(212, 191, 110);
+  background-color: var(--accent-color);
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 10px;
@@ -20,7 +39,7 @@
   align-items: center;
   justify-content: center;
   font-family: arial, sans-serif;
-  color: rgb(72, 69, 69);
+  color: var(--font-color);
   flex: 1;
 }
 
@@ -50,27 +69,26 @@
 
 .editar-usuario{
   display: inline-block;
-  padding: 2px 3px;
-  background-color: rgb(28, 171, 28);
+  padding: 5px 8px;
+  background-color: var(--secondary-color);
   color: white;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
+  font-size: 14px;
 }
+.editar-usuario:hover{
+  background-color: var(--darker-color);
+ }
+
 .remover-usuario {
-  display: inline-block;
-  padding: 2px 3px;
-  background-color: rgb(135, 41, 3);
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
+  background-color: var(--remove-color);
+  font-size: 14px;
   border: none;
-  cursor: pointer;
+}
+.remover-usuario:hover {
+  background-color: rgb(62, 4, 2);
+ 
 }
 
-.editar-usuario:hover,
-.remover-usuario:hover {
-  background-color: darkgreen;
-}
-  

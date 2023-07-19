@@ -1,6 +1,8 @@
  <div class="container">
   <div class="lista">
-    <h2 class="titulo-lista">Lista</h2>
+    <div class="titulo">
+       <h2 class="display-4 text-center mt-5 mb-4">Lista de usuarios registrados</h2>
+    </div>
     <table class="tabela">
       <tr>
         <th>#</th>
@@ -16,9 +18,10 @@
         <td>{{ user.idade }}</td>
         <td>
           <a [routerLink]="['/editar-usuario', user.id]" class="editar-usuario">Editar</a>
-          <button class="remover-usuario" (click)="removerUsuario(user.id)">Remover</button>
+          <button class="btn btn-primary remover-usuario" (click)="removerUsuario(user.id)">Remover</button>
         </td>
       </tr>
+
     </table>
   </div>
 </div>
