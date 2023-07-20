@@ -1,27 +1,32 @@
- <div class="container">
-  <div class="lista">
-    <div class="titulo">
-       <h2 class="display-4 text-center mt-5 mb-4">Lista de usuarios registrados</h2>
+<body>
+  <div class="container bg-color">
+    <div class="lista">
+      <div class="titulo">
+        <h2 class="display-4 text-center mt-5 mb-4">Lista de usuários registrados</h2>
+      </div>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th class = "table-header">#</th>
+            <th class = "table-header">Nome</th>
+            <th class = "table-header">Cargo</th>
+            <th class = "table-header">Idade</th>
+            <th class = "table-header">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of usuarios; let indice = index" class="user-row">
+            <td>{{ indice + 1 }}</td>
+            <td>{{ user.nome }}</td>
+            <td>{{ user.cargo }}</td>
+            <td>{{ user.idade }}</td>
+            <td>
+              <a [routerLink]="['/editar-usuario', user.id]" class="editar-usuario">Editar</a><a class="space"></a>
+              <button class="btn btn-primary remover-usuario" (click)="removerUsuario(user.id)">Remover</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <table class="tabela">
-      <tr>
-        <th>#</th>
-        <th>Nome</th>
-        <th>Cargo</th>
-        <th>Idade</th>
-        <th></th>
-      </tr>
-      <tr *ngFor="let user of usuarios; let indice = index" class="user-row">
-        <td>{{ indice + 1 }}</td>
-        <td>{{ user.nome }}</td>
-        <td>{{ user.cargo }}</td>
-        <td>{{ user.idade }}</td>
-        <td>
-          <a [routerLink]="['/editar-usuario', user.id]" class="editar-usuario">Editar</a>
-          <button class="btn btn-primary remover-usuario" (click)="removerUsuario(user.id)">Remover</button>
-        </td>
-      </tr>
-
-    </table>
   </div>
-</div>
+</body>

@@ -1,15 +1,35 @@
-/* Custom styles for the h1 heading */
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--darker-color); /* Replace with your desired background color */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-color);
+  background-color: var(--darker-color); /* Replace with the same background color as body */
+  gap: 10px;
+  flex: 1; /* Add this to fill the available space and push the footer to the bottom */
+}
+
 .titulo h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--font-color);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: rgb(172, 172, 172);
+  text-shadow: 1px 1px 1px rgb(97, 96, 96);
   transition: transform 0.3s ease-in;
 }
 
 .titulo h2:hover {
-  color: var(--secondary-color);
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  color: rgb(255, 253, 253);
+  text-shadow: 3px 3px 6px rgba(126, 126, 126, 0.3);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -21,16 +41,20 @@
   background-color: var(--accent-color);
 }
 
+.tr{
+  padding: 30px;
+}
+
+.table-header{
+  padding-left: 5px;
+  padding-right: 5x
+
+}
 .tabela {
-  background-color: var(--accent-color);
+  background-color: rgb(237, 230, 217);
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 10px;
-}
-
-.container {
-  display: flex;
-  gap: 10px; 
 }
 
 .lista {
@@ -43,12 +67,16 @@
   flex: 1;
 }
 
-.tabela th,
 .tabela td {
-  border: 1px solid black;
+  border: 1px solid black;;
   padding: 8px;
   font-family: Arial, sans-serif;
-  border-radius: 10px;
+}
+.topo th{
+
+  padding:8px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .form-item {
@@ -64,14 +92,14 @@
   width: 100%;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid gray;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .editar-usuario{
   display: inline-block;
   padding: 5px 8px;
   background-color: var(--secondary-color);
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   border-radius: 5px;
   border: none;
@@ -92,3 +120,10 @@
  
 }
 
+.space{
+  padding: 3px;
+}
+
+.vertical-space{
+  padding: 180px;
+}
