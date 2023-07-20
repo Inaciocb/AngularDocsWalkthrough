@@ -5,7 +5,7 @@ html, body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--darker-color); /* Replace with your desired background color */
+  background-color: var(--fundo); /* Replace with your desired background color */
 }
 
 .container {
@@ -14,7 +14,6 @@ html, body {
   align-items: center;
   justify-content: center;
   color: var(--font-color);
-  background-color: var(--darker-color); /* Replace with the same background color as body */
   gap: 10px;
   flex: 1; /* Add this to fill the available space and push the footer to the bottom */
 }
