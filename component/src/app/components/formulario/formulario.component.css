@@ -1,3 +1,40 @@
-.container {text-align: center;}
-.background {background-color: #cdcd89;}
-.titulo {color: #ffffff;}
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--fundo); /* Replace with your desired background color */
+}
+.container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This ensures the container takes the full viewport height */
+}
+
+.labels{
+    padding-right: 5px;
+}
+.labelId
+{
+    padding-right: 7px;
+}
+
+.botao{
+  display: flex;
+  padding: 5px 8px;
+  background-color: var(--secondary-color);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+}.botao:hover{
+  background-color: var(--darker-color);
+}

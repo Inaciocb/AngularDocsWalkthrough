@@ -1,13 +1,13 @@
 :root {
   --primary-color: #4A51FF;
   --secondary-color: #4c6190;
-  --darker-color: #252b3d;
+  --darker-color: #252e4a;
   --accent-color: #547fa0;
   --info-color: #8cd2e0;
   --success-color: #4AFFED;
   --remove-color: #9d2424;
   --font-color:  rgb(0, 0, 0);
-
+  --fundo: #31394b;
   --verde-1: #4CAF50;
   --verde-2: #66BB6A;
   --verde-3: #388E3C;
