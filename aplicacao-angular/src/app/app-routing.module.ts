@@ -4,12 +4,14 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { BitcoinComponent } from './components/bitcoin/bitcoin.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: 'formulario', component: FormularioComponent },
   { path: 'bitcoin', component: BitcoinComponent },
   { path: 'lista-usuarios', component: ListaUsuariosComponent },
   { path: 'editar-usuario/:id', component: EditarUsuarioComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
