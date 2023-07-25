@@ -8,6 +8,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { FormsModule } from '@angular/forms';
 import { ListaUsuariosComponent} from './components/lista-usuarios/lista-usuarios.component';
 import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuar
     FormularioComponent,   
     ListaUsuariosComponent,
     EditarUsuarioComponent,
+    LoginComponent,
   ],
   imports: [
     FormsModule,
