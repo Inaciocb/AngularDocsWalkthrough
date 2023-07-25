@@ -16,8 +16,8 @@ import { LoginComponent } from './components/login/login.component';
     BitcoinComponent,
     FormularioComponent,   
     ListaUsuariosComponent,
-     EditarUsuarioComponent,
-     LoginComponent
+    EditarUsuarioComponent,
+    LoginComponent
   ],
   imports: [
     FormsModule,
