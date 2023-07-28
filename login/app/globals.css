@@ -8,6 +8,25 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.botao{
+  background-color: #4985c1;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  padding: 5px;
+}.botao:hover{
+  background-color: #a7d3ff;
+  color: #26486a;
+  border: 1px solid #4985c1;
+  transition: 0.5s;
+}
+
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
