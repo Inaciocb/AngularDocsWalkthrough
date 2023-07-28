@@ -6,15 +6,15 @@ export default function Login() {
   if (session?.user) {
     return (
       <>
-        <h1 className="AuthStatus">Logado como: {session.user.email} </h1>
-        <button className="botao" onClick={() => signOut()}>Sign out</button>
+
+        <p className="authStatus">Logado como: {session.user.email}</p> 
+        <button className="botao" onClick={() => signOut()}>Sair</button>
       </>
     )
   }
   return (
     <>
-      <h1 className="AuthStatus">Não autenticado </h1>    
-      <button className="botao" onClick={() => signIn()}>Sign in</button>
+      <button className="botao" onClick={() => signIn()}>Iniciar Sessão</button>
     </>
   )
 }
