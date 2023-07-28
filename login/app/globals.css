@@ -15,15 +15,14 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-.header{
+.header {
     color: white;
     padding: 30px;
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
-    align-items: center;
-    display: flex;
-    padding-left: 600px;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
 }
 
 body {
