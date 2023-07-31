@@ -2,7 +2,7 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
-export default function Home() {
+export default function Header() {
   const { data: session } = useSession();
   const imagem: string = session?.user?.image;
   

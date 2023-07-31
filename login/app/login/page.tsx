@@ -6,7 +6,6 @@ export default function Login() {
   if (session?.user) {
     return (
       <>
-
         <p className="authStatus">Logado como: {session.user.email}</p> 
         <button className="botao" onClick={() => signOut()}>Sair</button>
       </>

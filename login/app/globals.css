@@ -8,6 +8,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.home{
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace; 
+  justify-content: center;
+  display: flex;
+}
+
 .botao{
   background-color: #4985c1;
   color: #fff;
